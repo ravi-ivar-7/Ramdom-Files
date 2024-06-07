@@ -1,0 +1,25 @@
+this project contains how to use forms and postgresql database
+install postgre and pip install psycopg2 in terminal
+go to folder of postrgre in stat and open shell 
+press enter for detains and give password
+use \l to list the databases in postgre
+CREATE DATABASE newdb; to create database
+CREATE USER ravi with PASSWORD '9828918420';
+(created database =>set username and password
+=>connect to new database as: \c newdb;
+=>create schema:CREATE SCHEMA newschema AUTHORIZATION ravi;
+=> alter role for required user:ALTER ROLE ravi SET client_encoding TO 'utf8';
+                                ALTER ROLE ravi SET default_transaction_isolation TO 'read committed';
+                                ALTER ROLE ravi SET timezone TO 'UTC'; )
+
+
+now use the new database(here newdb) , user(ravi) and password(9828918420) in your django setting.py project
+
+use \dt or \dt *.*(if not showing table) to see table in required database
+
+(use \dn+ to see details of schema)
+
+now make migrations if get error got to sql terminal as set: ALTER ROLE ravi IN DATABASE newdb set search_path = newschema;
+restart sql terminal to tables after migrations
+
+to see data in a table: SELECT * FROM "schema-name"."table-name"; (use \dt *.* to see tables)

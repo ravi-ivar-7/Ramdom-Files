@@ -1,0 +1,7 @@
+open folder in terminal to create virtual environment
+pip install virtualenv
+creating virtual env as :virtualenv venv(if error use: python -m virtualenv <nameOfEnv>)
+activate virtual env as: venv\Scripts\activate (now we are in virtual env)
+
+to see all installed packages:pip list
+pip install Django

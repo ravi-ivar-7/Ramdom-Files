@@ -1,0 +1,16 @@
+ls
+ls -al
+ssh-keygen
+(live blank for path of ssh keys)
+
+cd .ssh
+ls
+cat id_rsd.pub
+
+copy keys
+
+got to git and create ssh
+
+for home dir use : cd ..
+
+copy ssh link from git and use git clone link
